@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["davevallance@gmail.com"]
   spec.summary       = %q{A module to help create api clients quickly.}
   spec.description   = %q{A module to help create api clients quickly. The idea is you should only have to define your endpoints and not worry about setup and the http client.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/dvallance/simple_api_client"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
