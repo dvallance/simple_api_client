@@ -1,10 +1,8 @@
 require 'simple_api_client/version'
-require 'simple_api_client/http_caller/curb'
+require 'simple_api_client/http_caller/constants'
+require 'simple_api_client/http_caller/net_http'
 require 'simple_api_client/http_caller/response'
-require 'simple_api_client/http_caller/application_types'
 require 'active_support/core_ext/module/delegation'
-require 'json'
-
 
 module SimpleApiClient
 

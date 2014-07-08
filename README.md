@@ -1,6 +1,6 @@
 # SimpleApiClient
 
-TODO: Write a gem description
+A module to help create api clients quickly. The idea is you shou ld only have to define your endpoints and not worry about setup and the http client.
 
 ## Installation
 
@@ -18,7 +18,28 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+
+
+```ruby
+require 'simple_api_client'
+
+class YourClientClass
+
+  include SimpleApiClient
+
+  #including SimpleApiClient gives you a base initialize method that accepts two parameters.
+  #param1: excepts a URI object (which is used to set the Scheme, Host, Port etc, of your api.
+  #param2: is an object that responses to a call method which needs to accept a hash of options.
+
+  #Define your own endpoints
+
+  def client_info(client_id, payload)
+    call(method: :get, uri: uri('/client_info')
+  end
+
+
+end
+```
 
 ## Contributing
 

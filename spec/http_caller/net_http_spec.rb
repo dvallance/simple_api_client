@@ -2,7 +2,7 @@ require_relative '../spec_helper'
 
 #NOTE: tests require the server to be running. I use the shotgun gem but any rack server should work just run on port 9393 as its hardcoded below. (A sinatra app is created for these tests in config.ru)
 
-class CurbClient
+class NetHttpClient
   include SimpleApiClient
 
   # format can be :json or :xml (defaults to :json)
@@ -35,9 +35,9 @@ class CurbClient
   end
 end
 
-describe HttpCaller::Curb do
+describe HttpCaller::NetHttp do
 
-  subject { CurbClient.new('//127.0.0.1:9393/', HttpCaller::Curb.new) }
+  subject { NetHttpClient.new('//127.0.0.1:9393/', HttpCaller::NetHttp.new) }
 
   it '#call - a get request to /hello_world works when requesting json' do
     result = subject.hello_world(:json)
