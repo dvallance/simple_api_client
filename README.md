@@ -18,28 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-
-
-```ruby
-require 'simple_api_client'
-
-class YourClientClass
-
-  include SimpleApiClient
-
-  #including SimpleApiClient gives you a base initialize method that accepts two parameters.
-  #param1: excepts a URI object (which is used to set the Scheme, Host, Port etc, of your api.
-  #param2: is an object that responses to a call method which needs to accept a hash of options.
-
-  #Define your own endpoints
-
-  def client_info(client_id, payload)
-    call(method: :get, uri: uri('/client_info')
-  end
-
-
-end
-```
+See: i[simple_api_client.rb documentation](https://github.com/dvallance/simple_api_client/blob/master/lib/simple_api_client.rb).
 
 ## Contributing
 
