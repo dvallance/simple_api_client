@@ -53,3 +53,27 @@ describe TestClient do
   end
 
 end
+
+class TestClientWithOwnInitializer
+  include SimpleApiClient
+
+  attr_accessor :my_string
+
+  def initialize string
+    super('http://127.0.0.1:9393', TestCaller.new)
+    self.my_string = string
+  end
+
+end
+
+describe TestClientWithOwnInitializer do
+  it '#initializes properly' do
+    client = TestClientWithOwnInitializer.new('something')
+    client.scheme.must_equal 'http'
+    client.host.must_equal '127.0.0.1'
+    client.port.must_equal 9393
+    client.caller.class.must_equal TestCaller
+    client.my_string.must_equal 'something'
+  end
+
+end
