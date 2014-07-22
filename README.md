@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-See: i[simple_api_client.rb documentation](https://github.com/dvallance/simple_api_client/blob/master/lib/simple_api_client.rb).
+See: [simple_api_client.rb documentation](https://github.com/dvallance/simple_api_client/blob/master/lib/simple_api_client.rb).
 
 ## Contributing
 
